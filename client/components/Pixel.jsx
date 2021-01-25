@@ -41,10 +41,16 @@ const doubleClick = evt => {
     backgroundColor: 'White'
   })
 }
-
+const dragEnter = evt => {
+  setStyle({
+    height: '100px', 
+    width: '100px', 
+    backgroundColor: 'Yellow'
+  })
+}
   return (
     <div style={style} onClick={clickHandler} onMouseEnter={turnGreen} onContextMenu={rightClick}
-    onDoubleClick={doubleClick}>
+    onDoubleClick={doubleClick} onDragEnter={dragEnter}>
     </div>
   )
 }
