@@ -34,9 +34,17 @@ const rightClick = evt => {
   })
   evt.preventDefault()
 }
+const doubleClick = evt => {
+  setStyle({
+    height: '100px', 
+    width: '100px', 
+    backgroundColor: 'White'
+  })
+}
 
   return (
-    <div style={style} onClick={clickHandler} onMouseEnter={turnGreen} onContextMenu={rightClick}>
+    <div style={style} onClick={clickHandler} onMouseEnter={turnGreen} onContextMenu={rightClick}
+    onDoubleClick={doubleClick}>
     </div>
   )
 }
