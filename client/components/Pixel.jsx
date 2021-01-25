@@ -23,11 +23,20 @@ const turnGreen = evt => {
     height: '100px', 
     width: '100px', 
     backgroundColor: 'green'
-})
+  })
+}
+
+const rightClick = evt => {
+  setStyle({
+    height: '100px', 
+    width: '100px', 
+    backgroundColor: 'black'
+  })
+  evt.preventDefault()
 }
 
   return (
-    <div style={style} onClick={clickHandler} onMouseEnter={turnGreen}>
+    <div style={style} onClick={clickHandler} onMouseEnter={turnGreen} onContextMenu={rightClick}>
     </div>
   )
 }
