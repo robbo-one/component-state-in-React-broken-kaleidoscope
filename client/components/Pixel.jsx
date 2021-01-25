@@ -11,8 +11,16 @@ const [style, setStyle] = useState({
     backgroundColor: randomHexColor()
 })
 
+const clickHandler = evt => {
+  setStyle({
+      height: '100px', 
+      width: '100px', 
+      backgroundColor: randomHexColor()
+  })
+}
+
   return (
-    <div style={style}>
+    <div style={style} onClick={clickHandler}>
     </div>
   )
 }
