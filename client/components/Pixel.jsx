@@ -13,6 +13,23 @@ const Pixel = () => {
     })
   }
 
+  const onDoubleClick = (evt) => {
+    setStyle({
+      height: "50px",
+      width: "50px",
+      backgroundColor: 'white'
+    })
+  }
+
+  const onDragEnter = (evt) => {
+    evt.preventDefault() 
+    setStyle({
+      height: "50px",
+      width: "50px",   
+      backgroundColor: 'yellow' 
+    })
+  } 
+
   const contextMenu = (evt) => {
     evt.preventDefault() 
     setStyle({
@@ -31,7 +48,10 @@ const Pixel = () => {
   return(<div style={style} 
   onMouseEnter={() => hoverHandler()}
   // onMouseLeave={() => hoverHandler()}
-  onContextMenu={(evt) => contextMenu(evt)}>
+  onContextMenu={(evt) => contextMenu(evt)}
+  onDoubleClick={(evt) => onDoubleClick(evt)}
+  onDragEnter={(evt) => onDragEnter(evt)}>
+
   </div>)
 }
 
