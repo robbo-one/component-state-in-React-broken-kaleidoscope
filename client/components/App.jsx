@@ -3,33 +3,16 @@ import Pixel from './Pixel'
 
 
 
+
 const App = () => {
+
+  // function makeArray() {
+  //   Array(len).fill(0).map(() => { return <Pixel/>})
+  // }
   
+  const len = 1000
+  return Array(len).fill(0).map(() => { return <Pixel/>})
   
-  // console.log(clickHandler)
-  const randomHexColor = () =>
-  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
-  return (
-    
-    <>
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-   
-    </>
-  )
 }
 
 export default App
