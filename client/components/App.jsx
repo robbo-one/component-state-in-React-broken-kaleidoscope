@@ -7,6 +7,7 @@ const App = () => {
   return (
     <>
     {/* <div>React development has begun!</div> */}
+
     <Pixel />
     <Pixel />
     <Pixel />
