@@ -8,14 +8,18 @@ const Poixel = () => {
     backgroundColor: 'DarkGoldenRod'
   })
 
-  return (
-    <div onClick={() => {
+  const clickHandler = evt => {
       setStyle({
         height: '100px',
         width: '100px',
         backgroundColor: randomHexColor()
       })
-    }} style={ style }></div>
+       
+  }
+
+  return (
+    <div style={ style } onClick={ clickHandler }>
+    </div>
   )
 }
 
