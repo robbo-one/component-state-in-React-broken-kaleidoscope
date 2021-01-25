@@ -13,9 +13,26 @@ const Pixel = (props) => {
       width: 100
     })
   }
+
+  const onMouseEnter = evt => {
+    setStyle({
+      backgroundColor: randomHexColor(),
+      height:100, 
+      width: 100
+    })
+  }
+
+  const onDragEnter = evt => {
+    setStyle({
+      backgroundColor: 'yellow',
+      height:100, 
+      width: 100
+    })
+  }
+
   console.log(style)
   return (
-  <div onClick={clickHandler} style={style}>
+  <div onClick={clickHandler} onMouseEnter={onMouseEnter} onDragEnter={onDragEnter} style={style}>
   </div>
   )
 }
