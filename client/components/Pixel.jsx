@@ -13,8 +13,24 @@ const Pixel = () => {
             { height: "50px", width: '50px', backgroundColor: randomHexColor() }
         )
       }
+
+      const turnGreen = evt => {
+        setStyle(
+            { height: "50px", width: '50px', backgroundColor: 'green' }
+        )
+      }
+
+      const turnBlack = evt => {
+        evt.preventDefault()
+        setStyle(
+            { height: "50px", width: '50px', backgroundColor: 'black' }
+        )
+      }
+
+
+
     return (
-        <div onClick={() => clickHandler()}style={style}></div>
+        <div onContextMenu={turnBlack} onMouseEnter={() => turnGreen()} onClick={() => clickHandler()}style={style}></div>
     )
 }
 
