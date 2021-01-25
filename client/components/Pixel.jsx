@@ -9,10 +9,14 @@ const Pixel = (props) => {
   console.log('cheese')
   return(
   <>
-  <div onClick = {() => setNewColour(randomHexColor)}  style={{
+  <div onClick = {() => setNewColour(randomHexColor)} 
+    onMouseEnter = {() => setNewColour('red')}
+    onDoubleClick ={() => setNewColor ('skylue')}
+  
+    style={{
     fontFamily: 'Times New Roman',
-    height: 100,
-    width: 100,
+    height: 5,
+    width: 5,
     backgroundColor: currentColour
   }}>
   Sbeve like cheese</div>
