@@ -7,16 +7,16 @@ const randomHexColor = () =>
 const Pixel = () => { 
   const hoverHandler = evt => {
     setStyle({
-      height: "50px",
-      width: "50px",
+      height: "3px",
+      width: "3px",
       backgroundColor: randomHexColor()
     })
   }
 
   const onDoubleClick = (evt) => {
     setStyle({
-      height: "50px",
-      width: "50px",
+      height: "3px",
+      width: "3px",
       backgroundColor: 'white'
     })
   }
@@ -24,8 +24,8 @@ const Pixel = () => {
   const onDragEnter = (evt) => {
     evt.preventDefault() 
     setStyle({
-      height: "50px",
-      width: "50px",   
+      height: "3px",
+      width: "3px",   
       backgroundColor: 'yellow' 
     })
   } 
@@ -33,15 +33,15 @@ const Pixel = () => {
   const contextMenu = (evt) => {
     evt.preventDefault() 
     setStyle({
-      height: "50px",
-      width: "50px",   
+      height: "3px",
+      width: "3px",   
       backgroundColor: 'black' 
     })
   } 
 
   const [style, setStyle] = useState({
-    height: "50px",
-    width: "50px",
+    height: "3px",
+    width: "3px",
     backgroundColor: randomHexColor()
   })
 
