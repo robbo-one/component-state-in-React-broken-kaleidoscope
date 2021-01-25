@@ -20,15 +20,57 @@ const Pixel = () => {
                 backgroundColor: randomHexColor()
             })
     }
+    const turnYellow = () => {
+        setStyle
+        ({
+            height: '100px',
+            width: '100px',
+            backgroundColor: 'yellow'
+        })
+    }
+    const turnGreen = (evt) => {
+        setStyle
+        ({
+            height: '100px',
+            width: '100px',
+            backgroundColor: 'green'
+        })
+    }
+
+    const turnBlack = (evt) => {
+        evt.preventDefault()
+        setStyle
+        ({
+            height: '100px',
+            width: '100px',
+            backgroundColor: 'black'
+        })
+    }
+
+    const turnWhite = () => {
+        setStyle
+        ({
+            height: '100px',
+            width: '100px',
+            backgroundColor: 'white'
+        })
+    }
+    
 
 
     return (
-        <div style={style} onClick={clickHandler}>
+        <div style={style} 
+        onClick={clickHandler} 
+        onDragEnter={turnYellow}
+        onMouseEnter={turnGreen}  
+        onContextMenu={turnBlack} 
+        onDoubleClick={turnWhite} 
+        
+        // onMouseLeave={clickHandler} 
+        >
         </div>
     )
 }
-
-
 
 
 export default Pixel
