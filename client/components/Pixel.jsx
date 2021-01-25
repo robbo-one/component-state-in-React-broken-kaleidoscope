@@ -12,18 +12,18 @@ const Pixel = () => {
 
     })
 
-    const changeBackground = () => {
+    const clickHandler = () => {
         setStyle
             ({
                 height: '100px',
                 width: '100px',
-                backgroundColor: 'blue'
+                backgroundColor: randomHexColor()
             })
     }
 
 
     return (
-        <div style={style} onClick={changeBackground}>
+        <div style={style} onClick={clickHandler}>
         </div>
     )
 }
