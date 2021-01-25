@@ -14,11 +14,50 @@ const Poixel = () => {
         width: '100px',
         backgroundColor: randomHexColor()
       })
-       
+  }
+
+  const onMouse = evt => {
+    setStyle({
+      height: '100px',
+      width: '100px',
+      backgroundColor: 'green'
+    })
+  }
+
+  const onContext = evt => {
+    setStyle({
+      height: '100px',
+      width: '100px',
+      backgroundColor: 'black'
+    })
+    evt.preventDefault()
+  }
+
+  const onWhite = evt => {
+    setStyle({
+      height: '100px',
+      width: '100px',
+      backgroundColor: 'white'
+    })
+  }
+
+  const onDrag = evt => {
+    setStyle({
+      height: '100px',
+      width: '100px',
+      backgroundColor: 'yellow'
+    })
   }
 
   return (
-    <div style={ style } onClick={ clickHandler }>
+    <div 
+    style={ style } 
+    onClick={ clickHandler }
+    onMouseEnter={ onMouse }
+    onContextMenu={ onContext }
+    onDoubleClick={ onWhite }
+    onDragEnter={ onDrag }
+    >
     </div>
   )
 }
