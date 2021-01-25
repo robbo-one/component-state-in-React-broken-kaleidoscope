@@ -5,19 +5,33 @@ const randomHexColor = () =>
     .toString(16).padStart(6, 0)}`
 
 const Pixel = () => { 
-  const clickHandler = evt => {
+  const hoverHandler = evt => {
     setStyle({
       height: "50px",
       width: "50px",
       backgroundColor: randomHexColor()
     })
   }
+
+  const contextMenu = (evt) => {
+    evt.preventDefault() 
+    setStyle({
+      height: "50px",
+      width: "50px",   
+      backgroundColor: 'black' 
+    })
+  } 
+
   const [style, setStyle] = useState({
     height: "50px",
     width: "50px",
     backgroundColor: randomHexColor()
   })
-  return(<div style={style} onMouseEnter={() => clickHandler()}>
+
+  return(<div style={style} 
+  onMouseEnter={() => hoverHandler()}
+  // onMouseLeave={() => hoverHandler()}
+  onContextMenu={(evt) => contextMenu(evt)}>
   </div>)
 }
 
