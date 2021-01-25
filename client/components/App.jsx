@@ -5,6 +5,11 @@ const App = () => {
   return (
     <div>
       <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
     </div>
   )
 }
