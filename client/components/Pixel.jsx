@@ -18,9 +18,16 @@ const clickHandler = evt => {
       backgroundColor: randomHexColor()
   })
 }
+const turnGreen = evt => {
+  setStyle({
+    height: '100px', 
+    width: '100px', 
+    backgroundColor: 'green'
+})
+}
 
   return (
-    <div style={style} onClick={clickHandler}>
+    <div style={style} onClick={clickHandler} onMouseEnter={turnGreen}>
     </div>
   )
 }
