@@ -1,25 +1,29 @@
 
 import React, { useState } from 'react'
 
+
+
 const Pixel = () => {
-    // const styleObject=
-    const [style, setStyle] = useState ({
+    const [style, setStyle] = useState({
         height: '100px',
         width: '100px',
         backgroundColor: 'deeppink'
     })
 
-    setStyle({
-        height: '100px',
-        width: '100px',
-        backgroundColor: 'blue'
-    })
-     
+    const changeBackground = () => {
+        setStyle
+            ({
+                height: '100px',
+                width: '100px',
+                backgroundColor: 'blue'
+            })
+    }
 
-    return(
-         <div style= {style}>
-         </div>
-         )
+
+    return (
+        <div style={style} onClick={changeBackground}>
+        </div>
+    )
 }
 
 
