@@ -6,7 +6,6 @@ import React, { useState } from 'react'
 
 const Pixel = (props) => { 
   const [currentColour, setNewColour] = useState(randomHexColor())
-  console.log('cheese')
   return(
   <>
   <div onClick = {() => setNewColour(randomHexColor)} 
@@ -15,11 +14,10 @@ const Pixel = (props) => {
   
     style={{
     fontFamily: 'Times New Roman',
-    height: 5,
-    width: 5,
+    height: 15,
+    width: 15,
     backgroundColor: currentColour
-  }}>
-  Sbeve like cheese</div>
+  }}></div>
   </>
   )
 }
