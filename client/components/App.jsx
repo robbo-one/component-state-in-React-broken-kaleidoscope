@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Poixel from './WhateverYouLike.jsx'
 
 const App = () => {
   
   return (
     <>
-    {Array(15000).fill(0).map(() => <Poixel/>)}
-   
+    {Array(200).fill(0).map(() => <Poixel/>)}
     </>
   )
 }
