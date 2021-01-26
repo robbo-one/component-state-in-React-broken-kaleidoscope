@@ -6,45 +6,45 @@ const randomHexColor = () =>
 
 const Pixel = () => {
 const [style, setStyle] = useState({
-    height: '100px', 
-    width: '100px', 
+    height: '15px', 
+    width: '15px', 
     backgroundColor: randomHexColor()
 })
 
 const clickHandler = evt => {
   setStyle({
-      height: '100px', 
-      width: '100px', 
+      height: '15px', 
+      width: '15px', 
       backgroundColor: randomHexColor()
   })
 }
 const turnGreen = evt => {
   setStyle({
-    height: '100px', 
-    width: '100px', 
+    height: '15px', 
+    width: '15px', 
     backgroundColor: 'green'
   })
 }
 
 const rightClick = evt => {
   setStyle({
-    height: '100px', 
-    width: '100px', 
+    height: '15px', 
+    width: '15px', 
     backgroundColor: 'black'
   })
   evt.preventDefault()
 }
 const doubleClick = evt => {
   setStyle({
-    height: '100px', 
-    width: '100px', 
+    height: '15px', 
+    width: '15px', 
     backgroundColor: 'White'
   })
 }
 const dragEnter = evt => {
   setStyle({
-    height: '100px', 
-    width: '100px', 
+    height: '15px', 
+    width: '15px', 
     backgroundColor: 'Yellow'
   })
 }
