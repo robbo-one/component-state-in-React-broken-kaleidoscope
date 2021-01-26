@@ -12,6 +12,20 @@ const Pixel = () => {
 
     })
 
+
+    
+    const timer = () => {
+        setStyle
+            ({
+                height: '50px',
+                width: '50px',
+                backgroundColor: randomHexColor()
+            })
+    }
+
+    const changeOnTime = setInterval(timer, 2000)
+
+
     const clickHandler = () => {
         setStyle
             ({
@@ -62,9 +76,10 @@ const Pixel = () => {
         <div style={style} 
         onClick={clickHandler} 
         onDragEnter={turnYellow}
-        // onMouseEnter={turnGreen}  
+        onMouseEnter={turnGreen}  
         onContextMenu={turnBlack} 
         onDoubleClick={turnWhite} 
+        changeOnTime
         
         // onMouseLeave={clickHandler} 
         >

@@ -11,7 +11,7 @@ const App = () => {
   // let arr = Array.from({length: 50}, () => <Pixel />)
 
   // let arr = new Array(50).fill(0).map(() => <Pixel />)
-  let arr = new Array(500).fill(<Pixel />)
+  let arr = new Array(750).fill(<Pixel />)
 
   // let arr = []
   // let i;
