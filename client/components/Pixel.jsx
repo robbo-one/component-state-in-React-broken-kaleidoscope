@@ -6,8 +6,8 @@ const randomHexColor = () =>
 
 const Pixel = () => {
     const [style, setStyle] = useState({
-        height: '100px',
-        width: '100px',
+        height: '50px',
+        width: '50px',
         backgroundColor: randomHexColor()
 
     })
@@ -15,24 +15,24 @@ const Pixel = () => {
     const clickHandler = () => {
         setStyle
             ({
-                height: '100px',
-                width: '100px',
+                height: '50px',
+                width: '50px',
                 backgroundColor: randomHexColor()
             })
     }
     const turnYellow = () => {
         setStyle
         ({
-            height: '100px',
-            width: '100px',
+            height: '50px',
+            width: '50px',
             backgroundColor: 'yellow'
         })
     }
     const turnGreen = (evt) => {
         setStyle
         ({
-            height: '100px',
-            width: '100px',
+            height: '50px',
+            width: '50px',
             backgroundColor: 'green'
         })
     }
@@ -41,8 +41,8 @@ const Pixel = () => {
         evt.preventDefault()
         setStyle
         ({
-            height: '100px',
-            width: '100px',
+            height: '50px',
+            width: '50px',
             backgroundColor: 'black'
         })
     }
@@ -50,8 +50,8 @@ const Pixel = () => {
     const turnWhite = () => {
         setStyle
         ({
-            height: '100px',
-            width: '100px',
+            height: '50px',
+            width: '50px',
             backgroundColor: 'white'
         })
     }
@@ -62,7 +62,7 @@ const Pixel = () => {
         <div style={style} 
         onClick={clickHandler} 
         onDragEnter={turnYellow}
-        onMouseEnter={turnGreen}  
+        // onMouseEnter={turnGreen}  
         onContextMenu={turnBlack} 
         onDoubleClick={turnWhite} 
         
