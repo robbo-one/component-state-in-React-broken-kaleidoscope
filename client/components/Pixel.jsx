@@ -19,7 +19,7 @@ import React, { useState } from 'react'
   return(
   <>
   <div onClick = {() => timer()} 
-    onMouseEnter = {() => timer()}
+    onMouseEnter = {() => setNewColour('transparent')}
     onDoubleClick ={() => timer()}
     style={{
     fontFamily: 'Times New Roman',
